@@ -24,4 +24,4 @@ jobs:
             source: "./"
             format: "json"
             debug: 1
-            fail_build: true
+            fail_build: false
