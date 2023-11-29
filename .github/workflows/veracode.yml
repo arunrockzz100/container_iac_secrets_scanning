@@ -62,7 +62,6 @@ jobs:
             command: "sbom" 
             type: "directory"
             source: "./"
-            format: "github"
+            format: "spdx-json"
             debug: false
             fail_build: false
-          if: false
