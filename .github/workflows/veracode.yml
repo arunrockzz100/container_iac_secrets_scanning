@@ -22,6 +22,18 @@ jobs:
             command: "scan" 
             type: "directory"
             source: "./"
+            format: "json"
+            debug: false
+            fail_build: false
+
+        - name: Veracode Container/IaC/Secrets action step
+          uses: veracode/container_iac_secrets_scanning@v1.0.0
+          with:
+            vid: ${{ secrets.VID }}
+            vkey: ${{ secrets.VKEY }}
+            command: "sbom" 
+            type: "directory"
+            source: "./"
             format: "github"
             debug: false
             fail_build: false
